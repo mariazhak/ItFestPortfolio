@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background-color: #1a1a1a;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background: #2c2c2c;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #404040;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #6a99fc;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-button {
+    color: #6a99fc;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: large;
+}
+
+.nav-button:hover {
+    transform: translateY(-4px);
+}
+
+/* Hero Section */
+.hero {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('./assets/binary_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* Team Section */
+.team {
+    padding: 80px 0;
+    background: #262626;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #e0e0e0;
+}
+
+.team-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: #3a3a3a;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    border: 1px solid #505050;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member.left {
+    flex-direction: row;
+}
+
+.team-member.right {
+    flex-direction: row-reverse;
+}
+
+.member-photo {
+    flex-shrink: 0;
+}
+
+.member-photo img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #6a99fc;
+}
+
+.member-info {
+    flex: 1;
+}
+
+.member-info h3 {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+.member-info p {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.member-info strong {
+    color: #6a99fc;
+}
+
+/* Footer */
+.footer {
+    background: #1a1a1a;
+    color: #e0e0e0;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid #404040;
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .navigation {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 100px 0 60px;
+        margin-top: 120px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .team-member {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .member-photo img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .nav-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .team-member {
+        padding: 1.5rem;
+    }
+
+    .member-photo img {
+        width: 150px;
+        height: 150px;
+    }
+}
